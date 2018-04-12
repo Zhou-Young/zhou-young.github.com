@@ -1,43 +1,37 @@
-#version
-version: "1.0"
+title: Hello, world! I'm David Freeman
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+permalink: ':title/'
+baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
 
-permalink: /:year/:month/:day/:title/
+# Author Settings
+author: David Freeman # add your name
+author-img: david-freeman.jpg # add your photo
+about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+social-twitter: # add your Twitter handle
+social-facebook: # add your Facebook handle
+social-github: artemsheludko # add your Github handle
+social-linkedin: # add your Linkedin handle
+social-email: # add your Email address
 
-# 站点设置
-title: "Zhou-Young"
-email: 181772441@qq.com@qq.com
-description: "周扬的个人博客"
-keywords: "Zhou-Young"
+# Disqus
+discus-identifier: mr-brown # add your discus identifier
 
-# 用户信息设置
-weibo_username: 范范特汐
-github_username: Zhou-Young
+# Tracker
+analytics: # Google Analytics
 
-# Markdown设置
-kramdown:
-  input:  GFM
-  use_coderay: true
-  coderay:
-    coderay_line_numbers:  nil
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
 
+paginate: 8
+paginate_path: "/page/:num"
 
-
-# 地址设置
-baseurl: "/jekyll-pithy"
-url: "http://127.0.0.1:4000"
-
-
-# 分页设置
-paginate: 10
-paginate_path: "page/:num"
-
-#scss设置
-sass:
-    sass_dir: /assets/stylesheet
-    style: :compressed
-
-# duoshuo设置
-# duoshuo_shortname: 
-
-# 百度统计设置
-# baidu_analysis:
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
